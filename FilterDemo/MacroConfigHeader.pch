@@ -1,0 +1,36 @@
+//
+//  MacroConfigHeader.pch
+//  FilterDemo
+//
+//  Created by 朴子hp on 2018/11/27.
+//  Copyright © 2018年 朴子hp. All rights reserved.
+//
+
+#ifndef MacroConfigHeader_pch
+#define MacroConfigHeader_pch
+
+
+//滤镜工具类 / GPUImage 图片处理库
+#import "FilterStyleUtils.h"
+#import "GPUImage.h"
+
+/**  适配刘海导航栏 */
+#define kStatusH [[UIApplication sharedApplication] statusBarFrame].size.height
+#define kNavH    (CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) ?  88 : 64)
+#define kTabBarH (CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) ?  83 : 49)
+
+/**  屏幕宽高 */
+#define kScreenW [UIScreen mainScreen].bounds.size.width
+#define kScreenH [UIScreen mainScreen].bounds.size.height
+
+#pragma mark -- /**  颜色相关 */
+/**  颜色相关 */
+#define kRgbColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+#define kRgbAColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+#define kHexOfColor(rgbValue)     [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 \
+alpha:1.0]
+
+
+#endif /* MacroConfigHeader_pch */
