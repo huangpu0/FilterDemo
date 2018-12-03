@@ -24,6 +24,7 @@
 }
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     self.navigationItem.title = @"相册滤镜处理";

@@ -102,6 +102,10 @@
 		F68702AF21AE7C0A00FC9E55 /* audio530.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F687028521AE7C0A00FC9E55 /* audio530.mp3 */; };
 		F68702B021AE7C0A00FC9E55 /* music2.json in Resources */ = {isa = PBXBuildFile; fileRef = F687028621AE7C0A00FC9E55 /* music2.json */; };
 		F687032121B0C66000FC9E55 /* VideoCameraVCtrller.m in Sources */ = {isa = PBXBuildFile; fileRef = F687032021B0C66000FC9E55 /* VideoCameraVCtrller.m */; };
+		F687032421B0CE2000FC9E55 /* VideoFilterVCtrller.m in Sources */ = {isa = PBXBuildFile; fileRef = F687032321B0CE2000FC9E55 /* VideoFilterVCtrller.m */; };
+		F687032D21B0E12000FC9E55 /* HVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F687032C21B0E12000FC9E55 /* HVideoPlayer.m */; };
+		F687033021B1045B00FC9E55 /* VideoUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F687032F21B1045B00FC9E55 /* VideoUtils.m */; };
+		F687033321B1281600FC9E55 /* VFilterStyleUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F687033221B1281600FC9E55 /* VFilterStyleUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -233,6 +237,14 @@
 		F687028621AE7C0A00FC9E55 /* music2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = music2.json; sourceTree = "<group>"; };
 		F687031F21B0C66000FC9E55 /* VideoCameraVCtrller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCameraVCtrller.h; sourceTree = "<group>"; };
 		F687032021B0C66000FC9E55 /* VideoCameraVCtrller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCameraVCtrller.m; sourceTree = "<group>"; };
+		F687032221B0CE2000FC9E55 /* VideoFilterVCtrller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoFilterVCtrller.h; sourceTree = "<group>"; };
+		F687032321B0CE2000FC9E55 /* VideoFilterVCtrller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoFilterVCtrller.m; sourceTree = "<group>"; };
+		F687032B21B0E12000FC9E55 /* HVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HVideoPlayer.h; sourceTree = "<group>"; };
+		F687032C21B0E12000FC9E55 /* HVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HVideoPlayer.m; sourceTree = "<group>"; };
+		F687032E21B1045B00FC9E55 /* VideoUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoUtils.h; sourceTree = "<group>"; };
+		F687032F21B1045B00FC9E55 /* VideoUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoUtils.m; sourceTree = "<group>"; };
+		F687033121B1281600FC9E55 /* VFilterStyleUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VFilterStyleUtils.h; sourceTree = "<group>"; };
+		F687033221B1281600FC9E55 /* VFilterStyleUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VFilterStyleUtils.m; sourceTree = "<group>"; };
 		F8442D257430932F169D608F /* Pods-FilterDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilterDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FilterDemo/Pods-FilterDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -413,6 +425,8 @@
 				F68701C421AE26C600FC9E55 /* FilterTypeCell.h */,
 				F68701C521AE26C600FC9E55 /* FilterTypeCell.m */,
 				F68701C621AE26C600FC9E55 /* FilterTypeCell.xib */,
+				F687032B21B0E12000FC9E55 /* HVideoPlayer.h */,
+				F687032C21B0E12000FC9E55 /* HVideoPlayer.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -422,6 +436,10 @@
 			children = (
 				F68701CA21AE6C9700FC9E55 /* FilterStyleUtils.h */,
 				F68701CB21AE6C9700FC9E55 /* FilterStyleUtils.m */,
+				F687033121B1281600FC9E55 /* VFilterStyleUtils.h */,
+				F687033221B1281600FC9E55 /* VFilterStyleUtils.m */,
+				F687032E21B1045B00FC9E55 /* VideoUtils.h */,
+				F687032F21B1045B00FC9E55 /* VideoUtils.m */,
 			);
 			path = FilterUtils;
 			sourceTree = "<group>";
@@ -640,6 +658,8 @@
 			children = (
 				F687031F21B0C66000FC9E55 /* VideoCameraVCtrller.h */,
 				F687032021B0C66000FC9E55 /* VideoCameraVCtrller.m */,
+				F687032221B0CE2000FC9E55 /* VideoFilterVCtrller.h */,
+				F687032321B0CE2000FC9E55 /* VideoFilterVCtrller.m */,
 			);
 			path = VideosFilter;
 			sourceTree = "<group>";
@@ -909,9 +929,13 @@
 				F68701C721AE26C600FC9E55 /* FilterTypeCell.m in Sources */,
 				F68700E721AD17A400FC9E55 /* PhotoCameraVCtrller.m in Sources */,
 				F68700BB21AD0F3700FC9E55 /* main.m in Sources */,
+				F687032D21B0E12000FC9E55 /* HVideoPlayer.m in Sources */,
 				F68700AD21AD0F3600FC9E55 /* AppDelegate.m in Sources */,
+				F687032421B0CE2000FC9E55 /* VideoFilterVCtrller.m in Sources */,
+				F687033321B1281600FC9E55 /* VFilterStyleUtils.m in Sources */,
 				F68701C321AE266300FC9E55 /* FilterTypeView.m in Sources */,
 				F68701CC21AE6C9700FC9E55 /* FilterStyleUtils.m in Sources */,
+				F687033021B1045B00FC9E55 /* VideoUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

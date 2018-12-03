@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "PhotoCameraVCtrller.h"
+#import "VideoCameraVCtrller.h"
 
 @interface ViewController ()
 
@@ -57,6 +58,8 @@
         
     }else{
         
+        VideoCameraVCtrller *vVC = [[VideoCameraVCtrller alloc]init];
+        [self.navigationController pushViewController:vVC animated:YES];
     }
 }
 

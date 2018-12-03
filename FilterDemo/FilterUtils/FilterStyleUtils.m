@@ -68,6 +68,7 @@
     GPUImageGaussianBlurFilter *disFilter = [[GPUImageGaussianBlurFilter alloc] init];
    // texelSpacingMultiplier是模糊的强度，数值越大，模糊效果越明显
     disFilter.texelSpacingMultiplier = 9.0f;
+    disFilter.blurRadiusInPixels = 6.0f;
     //设置要渲染的区域
     [disFilter forceProcessingAtSize:sourceImage.size];
     [disFilter useNextFrameForImageCapture];

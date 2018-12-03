@@ -44,7 +44,7 @@
     _myCamera = [[GPUImageStillCamera alloc] initWithSessionPreset:AVCaptureSessionPreset1280x720 cameraPosition:AVCaptureDevicePositionBack];
     //竖屏方向
     _myCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
-    _myCamera.audioEncodingTarget = nil;
+
     
     GPUImageSepiaFilter *stretchDistortionFilter = [[GPUImageSepiaFilter alloc] init];
     self.myFilter = stretchDistortionFilter;
@@ -62,6 +62,13 @@
 
 #pragma mark - 建立主要触摸视图
 - (void)setUpContentView{
+    
+    UIButton *back = [[UIButton alloc]init];
+    back.tag = 106;
+    back.frame = CGRectMake(30, kStatusH, 50, 30);
+    [back setTitle:@"返回" forState:UIControlStateNormal];
+    [back addTarget:self action:@selector(eventTouch:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:back];
     
     //底部试图
     UIView *btView = [[UIView alloc]init];
@@ -112,6 +119,9 @@
 - (void)eventTouch:(UIButton *)btn{
     
     switch (btn.tag) {
+        case 106:{
+            [self.navigationController popViewControllerAnimated:YES];
+        }break;
         case 100:{
            [self openImagePickerControllerWithType:UIImagePickerControllerSourceTypePhotoLibrary];
         }break;
